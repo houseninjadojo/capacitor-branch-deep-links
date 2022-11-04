@@ -17,13 +17,6 @@ export class BranchDeepLinksWeb
   extends WebPlugin
   implements BranchDeepLinksPlugin
 {
-  constructor() {
-    super({
-      name: 'BranchDeepLinks',
-      platforms: ['web'],
-    });
-  }
-
   handleUrl(_: BranchUrlParams): Promise<void> {
     return Promise.reject(
       new Error('BranchDeepLinks does not have web implementation'),
@@ -81,9 +74,5 @@ export class BranchDeepLinksWeb
     return Promise.reject(
       new Error('BranchDeepLinks does not have web implementation'),
     );
-  }
-
-  notifyListeners(eventName: string, data: any): void {
-    super.notifyListeners(eventName, data);
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@houseninja/capacitor-branch",
-  "version": "5.1.0-beta.0",
+  "version": "5.1.0-beta.6",
   "description": "Capacitor plugin for Branch.io deep links",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -44,7 +44,7 @@
     "dist/",
     "ios/",
     "android/",
-    "CapacitorBranchDeepLinks.podspec"
+    "HouseninjaCapacitorBranch.podspec"
   ],
   "keywords": [
     "branch.io",
@@ -66,10 +66,10 @@
   "swiftlint": "@ionic/swiftlint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BranchMetrics/capacitor-branch-deep-links"
+    "url": "https://github.com/houseninjadojo/capacitor-branch"
   },
   "bugs": {
-    "url": "https://github.com/BranchMetrics/capacitor-branch-deep-links/issues"
+    "url": "https://github.com/houseninjadojo/capacitor-branch/issues"
   },
   "husky": {
     "hooks": {

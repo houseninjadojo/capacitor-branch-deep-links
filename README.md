@@ -20,7 +20,6 @@ npx cap sync
 
 - [`addListener('init', ...)`](#addlistenerinit)
 - [`addListener('initError', ...)`](#addlisteneriniterror)
-- [`notifyListeners(...)`](#notifylisteners)
 - [`handleUrl(...)`](#handleurl)
 - [`generateShortUrl(...)`](#generateshorturl)
 - [`showShareSheet(...)`](#showsharesheet)
@@ -30,6 +29,7 @@ npx cap sync
 - [`setIdentity(...)`](#setidentity)
 - [`logout()`](#logout)
 - [`getBranchQRCode(...)`](#getbranchqrcode)
+- [`removeAllListeners()`](#removealllisteners)
 - [Interfaces](#interfaces)
 
 </docgen-index>
@@ -64,19 +64,6 @@ addListener(eventName: 'initError', listenerFunc: (error: any) => void) => Plugi
 | **`listenerFunc`** | <code>(error: any) =&gt; void</code> |
 
 **Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
-
----
-
-### notifyListeners(...)
-
-```typescript
-notifyListeners(eventName: string, data: any) => void
-```
-
-| Param           | Type                |
-| --------------- | ------------------- |
-| **`eventName`** | <code>string</code> |
-| **`data`**      | <code>any</code>    |
 
 ---
 
@@ -189,6 +176,14 @@ getBranchQRCode(options: BranchQRCodeParams) => Promise<BranchQRCodeResponse>
 | **`options`** | <code><a href="#branchqrcodeparams">BranchQRCodeParams</a></code> |
 
 **Returns:** <code>Promise&lt;<a href="#branchqrcoderesponse">BranchQRCodeResponse</a>&gt;</code>
+
+---
+
+### removeAllListeners()
+
+```typescript
+removeAllListeners() => Promise<void>
+```
 
 ---
 

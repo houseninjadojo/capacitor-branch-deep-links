@@ -19,6 +19,10 @@ public class BranchDeepLinks: CAPPlugin {
         Branch.getInstance().registerPluginName("Capacitor", version: "5.0.0")
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
     @objc public func setBranchService(branchService: Any) {
         self.branchService = branchService as! BranchService
     }
