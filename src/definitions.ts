@@ -86,6 +86,7 @@ export interface BranchDeepLinksPlugin {
     eventName: 'initError',
     listenerFunc: (error: any) => void,
   ): PluginListenerHandle;
+  notifyListeners(eventName: string, data: any): void;
   handleUrl(options: BranchUrlParams): Promise<void>;
   generateShortUrl(
     options: BranchShortUrlParams,
@@ -103,7 +104,5 @@ export interface BranchDeepLinksPlugin {
     newIdentity: string;
   }): Promise<BranchReferringParamsResponse>;
   logout(): Promise<BranchLoggedOutResponse>;
-  getBranchQRCode(
-    options: BranchQRCodeParams,
-  ): Promise<BranchQRCodeResponse>;
+  getBranchQRCode(options: BranchQRCodeParams): Promise<BranchQRCodeResponse>;
 }

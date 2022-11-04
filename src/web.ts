@@ -13,8 +13,10 @@ import {
   BranchQRCodeResponse,
 } from './definitions';
 
-export class BranchDeepLinksWeb extends WebPlugin
-  implements BranchDeepLinksPlugin {
+export class BranchDeepLinksWeb
+  extends WebPlugin
+  implements BranchDeepLinksPlugin
+{
   constructor() {
     super({
       name: 'BranchDeepLinks',
@@ -80,6 +82,8 @@ export class BranchDeepLinksWeb extends WebPlugin
       new Error('BranchDeepLinks does not have web implementation'),
     );
   }
+
+  notifyListeners(eventName: string, data: any): void {
+    super.notifyListeners(eventName, data);
+  }
 }
-
-
